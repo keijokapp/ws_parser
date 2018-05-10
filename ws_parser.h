@@ -1,5 +1,8 @@
 #ifndef WS_PARSER
 #define WS_PARSER
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 #include <stddef.h>
 #include <stdint.h>
@@ -63,4 +66,7 @@ ws_parser_execute(ws_parser_t* parser, /* mutates! */ char* buff, size_t len);
 const char*
 ws_parser_error(int rc);
 
+#ifdef __cplusplus
+}
+#endif
 #endif
